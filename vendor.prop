@@ -25,6 +25,10 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
+## Camera
+# libexynoscamera3 aborts when flushed while the stream is still starting
+ro.vendor.camera.startup_flush_wait_ms=5000
+
 ## HWUI
 debug.hwui.renderer=skiavk
 debug.hwui.use_hint_manager=true
