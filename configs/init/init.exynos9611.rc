@@ -337,7 +337,10 @@ on post-fs
     chown wifi root /mnt/vendor/efs/wifi/.mac.cob
     chmod 0664 /mnt/vendor/efs/wifi/.mac.cob
 
-    #write /sys/module/scsc_mx/parameters/disable_recovery_handling 0
+    # WLBT firmware auto-recovery stays off until memdump is 0 or 2 (set by
+    # Samsung's framework on stock). Without it a firmware crash leaves Wi-Fi
+    # and Bluetooth down until reboot.
+    write /sys/wifi/memdump 0
 
 # Samsung Pay
 #    mkdir /efs/pfw_data 0760 vendor_spay vendor_spay

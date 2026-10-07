@@ -15,3 +15,4 @@ allow init sysfs_leds_writable:file { setattr write open };
 allow init clean_scratch_files_exec:lnk_file read;
 
 allow init sysfs_block_writable:file rw_file_perms;
+allow init sysfs_wifi_writable:file w_file_perms;
