@@ -1,0 +1,16 @@
+//
+// SPDX-FileCopyrightText: 2026 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libshim_ui",
+    srcs: ["Fence.cpp"],
+    header_libs: [
+        "libbase_headers",
+        "libutils_headers",
+    ],
+    shared_libs: ["libsync"],
+    compile_multilib: "64",
+    vendor: true,
+}
